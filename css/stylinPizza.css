@@ -1,0 +1,10 @@
+body {
+  background-image: url("../img/pizzaBackground.jpeg");
+}
+#paper {
+  background-image: url("../img/paperTexture.jpeg");
+  width: 80%;
+}
+#menuHeading {
+  font-family: 'Pacifico', cursive;
+}
