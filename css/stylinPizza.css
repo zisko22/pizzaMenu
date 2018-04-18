@@ -2,9 +2,38 @@ body {
   background-image: url("../img/pizzaBackground.jpeg");
 }
 #paper {
+  margin-top: 20px;
+  margin-bottom: 20px;
   background-image: url("../img/paperTexture.jpeg");
   width: 80%;
 }
 #menuHeading {
   font-family: 'Pacifico', cursive;
+}
+.form-group {
+  font-family: 'Abril Fatface', cursive;
+  padding: 30px;
+}
+#paper2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url("../img/paperTexture.jpeg");
+  width: 80%;
+}
+#orderHeading {
+  font-family: 'Pacifico', cursive;
+  margin: 20px;
+  padding: 20px;
+}
+.null {
+  display: none;
+}
+#order {
+  font-family: 'Abril Fatface', cursive;
+}
+#orderHeading {
+  font-family: 'Pacifico', cursive;
+}
+#runningTotal {
+  text-decoration: underline;
 }

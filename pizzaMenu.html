@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bree+Serif|Lobster|Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="css/stylinPizza.css">
+
   </head>
   <body>
 
-    <!-- Piece of paper container -->
+    <!-- Pizza Menu container -->
     <div class="container" id="paper">
       <!-- Pizza Menu Heading -->
       <h1 class="display-1 text-center" id="menuHeading">Pizza Menu</h1>
@@ -18,164 +19,94 @@
       <!-- Order form -->
       <form>
         <!-- Radio buttons for size selection: Personal, Medium, Large, and Extra Large -->
-        <div class="form-group" id="sizeSelection">
-          <label for="sizeSelection">Size Selection</label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="personalSize" id="personalSize" value="personal" checked>
-            <label class="form-check-label" for="personalSize">Personal Size</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="mediumSize" id="mediumSize" value="medium">
-            <label class="form-check-label" for="mediumSize">Medium Size</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="largeSize" id="largeSize" value="large">
-            <label class="form-check-label" for="largeSize">Large Size</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="extraLargeSize" id="extraLargeSize" value="extraLarge">
-            <label class="form-check-label" for="extraLargeSize">Extra Large Size</label>
-          </div>
+        <div class="menu form-group" id="sizeSelection">
+          <h3>Size Selection:</h3>
+          <input class="size" type="radio" name="Size" value="Personal Size"> Personal Size <br>
+          <input class="size" type="radio" name="Size" value="Medium Size"> Medium Size <br>
+          <input class="size" type="radio" name="Size" value="Large Size"> Large Size <br>
+          <input class="size" type="radio" name="Size" value="Extra Large Size"> Extra Large Size <br>
         </div>
         <!-- Check boxes for multiple selections of meat: Pepperoni, Sausage, Canadian Bacon,
         Ground Beef, Anchovy, and Chicken -->
-        <div class="form-group" id="meatSelection">
-          <label for="meatSelection">Meat Selection (First one is included: +$1.00 for each additional)</label>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="pepperoni" id="pepperoni" value="pepperoni">
-            <label class="form-check-label" for="pepperoni">Pepperoni</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="sausage" id="sausage" value="sausage">
-            <label class="form-check-label" for="sausage">Sausage</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="canadianBacon" id="canadianBacon" value="canadianBacon">
-            <label class="form-check-label" for="canadianBacon">Canadian Bacon</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="groundBeef" id="groundBeef" value="groundBeef">
-            <label class="form-check-label" for="groundBeef">Ground Beef</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="anchovy" id="anchovy" value="anchovy">
-            <label class="form-check-label" for="anchovy">Anchovy</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="chicken" id="chicken" value="chicken">
-            <label class="form-check-label" for="chicken">Chicken</label>
-          </div>
+        <div class="menu form-group" id="meatSelection">
+          <h3>Meat Selection (First one included, +$1.00 for each extra):</h3>
+          <input class="meat" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni <br>
+          <input class="meat" type="checkbox" name="Meat" value="Sausage"> Sausage <br>
+          <input class="meat" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon <br>
+          <input class="meat" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef <br>
+          <input class="meat" type="checkbox" name="Meat" value="Anchovy"> Anchovy <br>
+          <input class="meat" type="checkbox" name="Meat" value="Chicken"> Chicken <br>
         </div>
         <!-- Radio buttons for a cheese selection: Regular, No Cheese, Extra Cheese -->
-        <div class="form-group" id="cheeseSelection">
-          <label for="cheeseSelection">Cheese Selection</label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="regularCheese" id="regularCheese" value="regular">
-            <label class="form-check-label" for="regularCheese">Regular Cheese</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="noCheese" id="noCheese" value="no">
-            <label class="form-check-label" for="noCheese">No Cheese</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="extraCheese" id="extraCheese" value="extra">
-            <label class="form-check-label" for="extraCheese">Extra Cheese (+$3.00)</label>
-          </div>
+        <div class="menu form-group" id="cheeseSelection">
+          <h3>Cheese Selection:</h3>
+          <input class="cheese" type="radio" name="Cheese" value="Regular Cheese"> Regular Cheese <br>
+          <input class="cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese <br>
+          <input class="cheese" type="radio" name="Cheese" value="Extra Cheese"> Extra Cheese (+$3.00)<br>
         </div>
         <!-- Radio buttons for a crust selection: Plain Crust, Garlic Butter Crust,
         Cheese Stuffed Crust, Spicy Crust, and House Special Crust -->
-        <div class="form-group" id="crustSelection">
-          <label for="crustSelection">Crust Selection</label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="plainCrust" id="plainCrust" value="plain">
-            <label class="form-check-label" for="plainCrust">Plain Crust</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="garlicButterCrust" id="garlicButterCrust" value="garlicButter">
-            <label class="form-check-label" for="garlicButterCrust">Garlic Butter Crust</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="cheeseStuffedCrust" id="cheeseStuffedCrust" value="cheeseStuffed">
-            <label class="form-check-label" for="cheeseStuffedCrust">Cheese Stuffed Crust (+$3.00)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="spicyCrust" id="spciyCrust" value="spicy">
-            <label class="form-check-label" for="spicyCrust">Spicy Crust</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="houseSpecialCrust" id="houseSpecialCrust" value="houseSpecial">
-            <label class="form-check-label" for="houseSpecialCrust">House Special Crust</label>
-          </div>
+        <div class="menu form-group" id="crustSelection">
+          <h3>Crust Selection:</h3>
+          <input class="crust" type="radio" name="crust" value="Plain Crust"> Plain Crust <br>
+          <input class="crust" type="radio" name="crust" value="Garlic Butter Crust"> Garlic Butter Crust <br>
+          <input class="crust" type="radio" name="crust" value="Cheese Stuffed Crust"> Cheese Stuffed Crust (+$3.00)<br>
+          <input class="crust" type="radio" name="crust" value="Spicy Crust"> Spicy Crust <br>
+          <input class="crust" type="radio" name="crust" value="House Special Crust"> House Special Crust <br>
         </div>
         <!-- Radio buttons for sauce selection: Marinara, White, Barbecue, and No Sauce -->
-        <div class="form-group" id="sauceSelection">
-          <label for="sauceSelection">Sauce Selection</label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="marinaraSauce" id="marinaraSauce" value="marinara">
-            <label class="form-check-label" for="marinaraSauce">Marinara Sauce</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="whiteSauce" id="whiteSauce" value="white">
-            <label class="form-check-label" for="whiteSauce">White Sauce</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="barbecueSauce" id="barbecueSauce" value="barbecue">
-            <label class="form-check-label" for="barbecueSauce">Barbecue Sauce</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="noSauce" id="noSauce" value="no">
-            <label class="form-check-label" for="noSauce">No Sauce</label>
-          </div>
+        <div class="menu form-group" id="sauceSelection">
+          <h3>Sauce Selection:</h3>
+          <input class="sauce" type="radio" name="Sauce" value="Marinara Sauce"> Marinara Sauce <br>
+          <input class="sauce" type="radio" name="Sauce" value="White Sauce"> White Sauce <br>
+          <input class="sauce" type="radio" name="Sauce" value="Barbecue Sauce"> Barbecue Sauce <br>
+          <input class="sauce" type="radio" name="Sauce" value="No Sauce"> No Sauce <br>
         </div>
         <!-- Check boxes for veggies: Tomatoes, Onions, Olives, Green Peppers, Mushrooms,
         Pineapple, Spinach, and Jalepeno -->
-        <div class="form-group" id="veggieSelection">
-          <label for="veggieSelection">Veggie Selection (First one is included: +$1.00 for each additional)</label>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="tomatoes" id="tomatoes" value="tomatoes">
-            <label class="form-check-label" for="tomatoes">Tomatoes</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="onions" id="onions" value="onions">
-            <label class="form-check-label" for="onions">Onions</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="greenPeppers" id="greenPeppers" value="greenPeppers">
-            <label class="form-check-label" for="greenPeppers">Green Peppers</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="mushrooms" id="mushrooms" value="mushrooms">
-            <label class="form-check-label" for="mushrooms">Mushrooms</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="pineapple" id="pineapple" value="pineapple">
-            <label class="form-check-label" for="pineapple">Pineapple</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="spinach" id="spinach" value="spinach">
-            <label class="form-check-label" for="spinach">Spinach</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="jalepeno" id="jalepeno" value="jalepeno">
-            <label class="form-check-label" for="jalepneo">Jalepeno</label>
-          </div>
+        <div class="menu form-group" id="veggieSelection">
+          <h3>Veggie Selection (First one included, +$1.00 for each extra):</h3>
+          <input class="veggie" type="checkbox" name="Veggie" value="Tomatoes"> Tomatoes <br>
+          <input class="veggie" type="checkbox" name="Veggie" value="Onions"> Onions <br>
+          <input class="veggie" type="checkbox" name="Veggie" value="Green Peppers"> Green Peppers <br>
+          <input class="veggie" type="checkbox" name="Veggie" value="Mushrooms"> Mushrooms <br>
+          <input class="veggie" type="checkbox" name="Veggie" value="Pineapple"> Pineapple <br>
+          <input class="veggie" type="checkbox" name="Veggie" value="Spinach"> Spinach <br>
+          <input class="veggie" type="checkbox" name="Veggie" value="Jalepeno"> Jalepeno <br>
         </div>
-    </form>
-      <!-- Base Pizza Prices:
-      Personal = $6.00
-      Medium = $10.00
-      Large = $14.00
-      XLarge = $16.00 -->
 
-      <!-- Mod pricing:
-      MeatQuantity > 1 = $1 per additional meat item
-      VeggieQuantity > 1 = $1 per additional veggie item
-      ExtraCheese = + $3 for any size
-      StuffedCrust = + $3 -->
+
+
+      </form>
+
+      <!-- Order button! -->
+      <div class="form-group">
+        <input id="orderButton" type="button" onclick="startOrder ()" value="Order Pizza!">
+      </div>
+
     </div>
-    <!-- End Piece of paper container -->
+    <!-- End Pizza Menu container -->
+
+    <!-- Pizza Order container -->
+    <div class="container" id="paper2">
+
+      <!-- Div for your order -->
+      <div id="order">
+        <h1 class="display-1 text-center" id="orderHeading"></h1>
+        <p id="selectedSize"></p>
+        <div id="selectedMeat"></div>
+        <p id="selectedCheese"></p>
+        <p id="selectedCrust"></p>
+        <p id="selectedSauce"></p>
+        <div id="selectedVeggies"></div>
+        <p id="runningTotal"></p>
+      </div>
+
+    </div>
+    <!-- End Pizza Order container -->
 
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
-
+    <script src="./js/pizzaOrder.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   </body>
 </html>
